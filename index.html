@@ -1,579 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <style> 
-    :root {
-    --bs-primary: #e9ff09;
-    --bs-primary-light: #e9ff09;
-    --bs-secondary: #010101;
-    --bs-primary-rgb: 0, 40, 40;
-    --bs-secondary-rgb: 1, 1, 1;
-    --bs-border-radius: 0;
-    --bs-body-font-family: "Outfit";
-  }
-  
-  .color_lime {
-    color: #e9ff09 !important;
-  }
-  
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 600 !important;
-    line-height: 1.4;
-  }
-  
-  li::marker {
-    color: var(--bs-secondary);
-  }
-  
-  .section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-  .text-gray {
-    color: #898989;
-  }
-  .text-gray-light {
-    color: #d1d1d1;
-  }
-  
-  #mainSection {
-    background: url("https://appx-static.akamai.net.in/tharunspeaks/main-bg.png");
-  }
-  .hiring-section {
-    font-size: 2.5rem;
-  }
-  
-  #testimonialsSection .user-img {
-    width: 150px;
-    height: 150px;
-  }
-  .border-yellow {
-    border: 1px solid #e9ff09 !important;
-  }
-  .rounded-40 {
-    border-radius: 40px !important;
-    overflow: hidden;
-  }
-  .underlined {
-    background: url(https://appx-static.akamai.net.in/tharunspeaks/underline.svg)
-      no-repeat;
-    background-size: 100% 50%;
-    background-position: bottom;
-  }
-  .underlined-wt {
-    background: url(https://appx-static.akamai.net.in/tharunspeaks/underline-wt.svg)
-      no-repeat;
-    background-size: 100% 65%;
-    background-position: bottom;
-  }
-  
-  .bg-why-img {
-    background-image: url(./Assets/why-web-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .title-number {
-    font-family: Overpass Mono;
-    font-size: 100.36px;
-    font-weight: 700;
-    line-height: 389.64px;
-    text-align: left;
-    color: #ffffff63;
-  }
-  .title-text {
-    font-family: Outfit;
-    font-size: 66.04px;
-    font-weight: 700;
-    line-height: 77.19px;
-    text-align: left;
-    color: #e9ff09;
-  }
-  .underlined-lg {
-    background: url(https://appx-static.akamai.net.in/tharunspeaks/underline-lg.svg)
-      no-repeat;
-    background-size: 109% 68%;
-    background-position: bottom;
-  }
-  .slick-dots li button:before {
-    color: white !important;
-  }
-  
-  .card-deck {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-  }
-  
-  .card {
-    flex: 1 0 auto;
-  }
-  
-  iframe,
-  img {
-    max-width: 100%;
-  }
-  
-  .btn {
-    border-radius: var(--bs-border-radius);
-    padding: 0.5rem 1.5rem;
-  }
-  
-  .btn-group-sm > .btn,
-  .btn-sm {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-  }
-  
-  .btn-lg {
-    padding: 0.8rem 4rem;
-    font-weight: 700 !important;
-    font-size: 1.6rem;
-    border-radius: var(--bs-border-radius);
-  }
-  
-  .btn-outline-primary {
-    border-color: var(--bs-primary);
-    color: var(--bs-primary);
-  }
-  
-  .bg-primary {
-    background-color: var(--bs-primary) !important;
-  }
-  
-  .btn-primary,
-  .btn-primary:hover,
-  .btn-outline-primary:hover {
-    color: #000;
-    font-weight: 500;
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
-    box-shadow: 5px 5px 0px #000;
-  }
-  .btn-primary-light,
-  .btn-primary:hover {
-    color: #000;
-    font-weight: 500;
-    background-color: var(--bs-primary-light);
-    border-color: var(--bs-primary-light);
-    box-shadow: 5px 5px 0px #000;
-  }
-  
-  .btn-secondary,
-  .btn-secondary:hover,
-  .btn-outline-secondary:hover {
-    color: var(--bs-primary);
-    background-color: #000;
-    border-color: #000;
-    box-shadow: 5px 5px 0px var(--bs-primary);
-  }
-  
-  .btn-outline-secondary {
-    color: var(--bs-secondary);
-    border: 2px solid var(--bs-secondary);
-    font-weight: 500;
-  }
-  .btn-outline-secondary:hover {
-    color: var(--bs-secondary);
-    border: 2px solid var(--bs-secondary);
-    font-weight: 500;
-  }
-  
-  .border-primary-light {
-    border-color: var(--bs-primary-light) !important;
-  }
-  .btn-outline-primary-light {
-    color: #fff;
-    border: 2px solid var(--bs-primary-light);
-    font-weight: 500;
-  }
-  
-  .btn-outline-primary-light:hover {
-    color: #000;
-    border: 2px solid var(--bs-primary-light);
-    background-color: var(--bs-primary-light);
-    font-weight: 500;
-  }
-  
-  .text-primary {
-    color: var(--bs-primary) !important;
-  }
-  .text-secondary {
-    color: var(--bs-secondary) !important;
-  }
-  .border-primary {
-    border-color: var(--bs-primary) !important;
-  }
-  .card {
-    border-radius: var(--bs-border-radius);
-  }
-  .card-img-top {
-    border-top-left-radius: var(--bs-border-radius);
-    border-top-right-radius: var(--bs-border-radius);
-  }
-  .nav-link {
-    padding: 1rem 1.8rem !important;
-    color: #fff !important;
-    font-weight: 400;
-  }
-  
-  .fw-bolder {
-    font-weight: 800 !important;
-  }
-  
-  .fw-bold {
-    font-weight: 600;
-  }
-  
-  .fw-semi-bold {
-    font-weight: 500 !important;
-  }
-  .rounded {
-    border-radius: 10px !important;
-  }
-  .rounded-sm {
-    border-radius: 10px;
-  }
-  
-  .rounded-lg {
-    border-radius: 1.5rem;
-  }
-  
-  .font-sm {
-    font-size: 0.9rem;
-  }
-  .owl-theme .owl-nav button {
-    position: absolute;
-    font-size: 50px !important;
-    color: #79e8ea !important;
-    top: 27%;
-  }
-  .owl-theme .owl-nav button:hover {
-    background: none !important;
-  }
-  .owl-theme .owl-nav .owl-prev {
-    left: 10px;
-  }
-  .owl-theme .owl-nav .owl-next {
-    right: 10px;
-  }
-  .shadow-light {
-    box-shadow: 5px 5px 0 gray;
-  }
-  .pricing-card {
-    box-shadow: 10px 10px 0 var(--bs-primary);
-    background-color: var(--bs-secondary);
-  }
-  
-  .free-asset-item {
-    cursor: pointer;
-  }
-  .free-asset-item:hover {
-    font-weight: 500;
-    /* background-color: #f1f1f1; */
-  }
-  #aboutSection .main-image {
-    width: 450px;
-    max-width: unset;
-  }
-  .disabled {
-    pointer-events: none;
-    opacity: 0.6;
-  }
-  
-  .accordion-button:not(.collapsed) {
-    background-color: #000 !important;
-    color: #fff;
-  }
-  .accordion-button {
-    background-color: #000 !important;
-    color: #fff;
-  }
-  .accordion-button:focus {
-    border-color: #000 !important;
-  }
-  
-  #footer {
-    color: #e9ff09;
-    background: url("https://appx-static.akamai.net.in/tharunspeaks/footer-bg.png")
-      no-repeat bottom;
-    background-size: cover;
-  }
-  #testimonialSection {
-    overflow: auto;
-  }
-  .font-italic {
-    font-style: italic;
-  }
-  .gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.8)
-    );  */
-    background: linear-gradient(
-      270deg,
-      #030014 0%,
-      rgba(3, 0, 20, 0.5) 16.67%,
-      rgba(3, 0, 20, 0) 33.33%,
-      rgba(3, 0, 20, 0) 50%,
-      rgba(3, 0, 20, 0) 66.67%,
-      rgba(3, 0, 20, 0.5) 83.33%,
-      #030014 100%
-    );
-  
-    z-index: 1;
-    pointer-events: none;
-  }
-  .slider-section {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .slider-content-section {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .testimonial-card-even {
-    flex-shrink: 0;
-    margin: 1rem;
-    border-radius: 1rem;
-    color: white;
-    border: none;
-    background: url("./Assets/testimonial-card-bg.png") no-repeat;
-    background-size: cover;
-  }
-  .testimonial-card-odd {
-    flex-shrink: 0;
-    margin: 1rem;
-    border-radius: 1rem;
-    color: white;
-    border: none;
-    background: url("./Assets/testimonial-card-odd-bg.png.jpg") no-repeat;
-    background-size: cover;
-  }
-  
-  .testimonial-card .card-body {
-    min-height: 484px;
-    overflow: hidden;
-    text-align: justify;
-  }
-  .owl-testimonial-1 .owl-item img,
-  .owl-testimonial-2 .owl-item img {
-    width: 50px !important;
-  }
-  .owl-testimonial-2 .read-more-btn {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    padding: 2px 12px;
-    background-color: var(--bs-primary-light);
-  }
-  .owl-testimonial-2 #readMore {
-    height: 338px;
-    margin-bottom: 1rem;
-  }
-  .owl-testimonial-2 #readMore.collapse:not(.show) {
-    display: block;
-    overflow: hidden;
-  }
-  .owl-testimonial-2 #readMore.collapse.show {
-    height: auto;
-  }
-  .fs-8 {
-    font-size: 18px;
-  }
-  
-  .owl-testimonial-2 a.collapsed::after {
-    content: "Read More";
-  }
-  
-  .owl-testimonial-2 a:not(.collapsed)::after {
-    content: "Read Less";
-  }
-  @media (max-width: 600px) {
-    .border-grey {
-      border: gray 2px solid;
-      border-radius: 5px;
-      margin-top: 5px;
-    }
-    .section {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-    }
-    #placementsSection h4 {
-      font-size: 20px;
-    }
-    #learnSection img {
-      /* max-height: 220px; */
-      border-radius: 1rem;
-      object-fit: cover;
-    }
-  }
-  
-  .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-  
-  /* Container around content */
-  .timeline .timeline-box {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-  }
-  
-  /* The circles on the timeline */
-  .timeline .timeline-box::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -13px;
-    background-color: white;
-    border: 4px solid #e9ff09;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  
-  /* Place the timeline-box to the left */
-  .timeline .left {
-    left: 0;
-  }
-  
-  /* Place the timeline-box to the right */
-  .timeline .right {
-    left: 50%;
-  }
-  
-  /* Add arrows to the left timeline-box (pointing right) */
-  .timeline .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-  }
-  
-  /* Add arrows to the right timeline-box (pointing left) */
-  .timeline .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-  
-  .video-section video {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
-  .accordion-button:focus {
-    box-shadow: unset !important;
-  }
-  
-  /* Fix the circle for timeline-boxs on the right side */
-  .timeline .right::after {
-    left: -13px;
-  }
-  
-  /* The actual content */
-  .timeline .content {
-    padding: 20px 30px;
-    background-color: rgb(0, 0, 0);
-    position: relative;
-    border-radius: 6px;
-    border: 1px solid white;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 768px) {
-    /* Place the timelime to the left */
-    .timeline::after {
-      left: 31px;
-    }
-  
-    .timeline .content {
-      padding: 20px 4px;
-    }
-  
-    /* Full-width timeline-boxs */
-    .timeline .timeline-box {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-  
-    /* Make sure that all arrows are pointing leftwards */
-    .timeline .timeline-box::before {
-      left: 60px;
-      border: medium solid rgba(0, 0, 0, 0.781);
-      border-width: 10px 10px 10px 0;
-      border-color: transparent white transparent transparent;
-    }
-  
-    /* Make sure all circles are at the same spot */
-    .timeline .left::after,
-    .timeline .right::after {
-      left: 18px;
-    }
-  
-    /* Make all right timeline-boxs behave like the left ones */
-    .timeline .right {
-      left: 0%;
-    }
-  }
-  
-  .timeline li::marker {
-    color: #e9ff09 !important;
-  }
-  </style>
-  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/web%20logo.png" />
+  <link rel="icon" type="image/x-icon" href="Assets/web logo.png" />
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -589,14 +19,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/lib/infiniteslidev2.min.js"></script>
+  <script src="/lib/infiniteslidev2.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/lib/Script.js"></script>
-  <link rel="stylesheet" href="https://tharunspeaks.in/main.css" />
+  <script src="Script.js"></script>
+  <link rel="stylesheet" href="/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/Assets/owl.carousel.min.css"
     integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -611,7 +41,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
   rel="stylesheet" />
-<script src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/animation/animation.js"></script>
+<script src="/animation/animation.js"></script>
 <!-- Slick CSS -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet" type="text/css"
@@ -629,7 +59,7 @@
           <nav class="navbar navbar-expand-lg navbar-dark py-3">
             <div class="container-fluid p-0">
               <a class="navbar-brand" href="/">
-                <img class="LogoImg" width="150" src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/logo.png"
+                <img class="LogoImg" width="150" src="/Assets/logo.png"
                   alt="" /></a>
 
 
@@ -696,7 +126,7 @@
                 <div data-aos="fade-up" class="display-4 text-center text-white mb-5">
                   what
                   <span class="underlined text-primary fw-bold">you'll learn</span> in
-                  this course
+                  this course 
                 </div>
                 <div class="card-container d-none d-md-block d-lg-block">
                   <div class="row">
@@ -719,17 +149,17 @@
                   <div class="row">
                     <div class="col-12">
                       <div class="card bg-transparent rounded-40 m-3 border-yellow">
-                        <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/1-min.png" alt="">
+                        <img src="/Assets/1-min.png" alt="">
                       </div>
                     </div>
                     <div>
                       <div class="card bg-transparent rounded-40 m-3 border-yellow">
-                        <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/2-min.png" alt="">
+                        <img src="Assets/2-min.png" alt="">
                       </div>
                     </div>
                     <div class="12">
                       <div class="card bg-transparent rounded-40 m-3 border-yellow">
-                        <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/3-min.png" alt="">
+                        <img src="Assets/3-min.png" alt="">
                       </div>
                     </div>
                   </div>
@@ -742,9 +172,9 @@
                   <span class="underlined text-primary">Why this course?</span>
                 </h1>
                 <div class="d-flex justify-content-center">
-                  <img style="width: 90%;" data-aos="fade-up" data-aos-duration="1000" src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/why-img-web.png"
+                  <img style="width: 90%;" data-aos="fade-up" data-aos-duration="1000" src="/Assets/why-img-web.png"
                     class="mb-5 d-none d-lg-block" />
-                  <img style="width: 90%;" data-aos="fade-up" data-aos-duration="1000" src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/why-img-web.png"
+                  <img style="width: 90%;" data-aos="fade-up" data-aos-duration="1000" src="/Assets/why-img-web.png"
                     class="mb-5 d-lg-none" />
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" class="fs-2 text-primary mb-2">
@@ -774,28 +204,28 @@
                 <div class="row px-3 justify-content-between">
                   <div data-aos="fade-up" data-aos-duration="1000"
                     class="col-md-3 p-3 py-lg-5 d-flex border-grey flex-column align-items-start text-white">
-                    <div class="fs-4 text-decoration-line-through" style="text-decoration-color: red !important">₹ 1200</div>
+                    <div class="fs-4 text-decoration-line-through" style="text-decoration-color: red !important">₹ xxxx</div>
                     <h1 class="display-4 ">
-                      ₹199
+                      ₹ xxx
                       <span class="font-sm fw-normal">+ GST</span>
                     </h1>
                     <h1 class="text-gray display-5 mb-4 " style="color: gold;">Essential</h1>
                     <div class="mb-3 text-white">
                       <div class="text-white mb-3 fs-5">
-                        <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/check-circle-dark.svg"
+                        <img src="/Assets/check-circle-dark.svg"
                           class="me-2 align-top d-none" width="30" />
                         <span class="font-italic fw-bold color_lime">For students passionate about programming</span>
                       </div>
                       <div class="text-white mb-3 fs-5">
-                        <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/check-circle-dark.svg" class="me-2 align-top"
+                        <img src="/Assets/check-circle-dark.svg" class="me-2 align-top"
                           width="30" /> Studio Quality Lectures
                       </div>
                       <div class="text-white mb-3 fs-5">
-                        <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/check-circle-dark.svg" class="me-2 align-top"
+                        <img src="/Assets/check-circle-dark.svg" class="me-2 align-top"
                           width="30" />Monthly 4 Live Classes
                       </div>
                       <div class="text-white mb-3 fs-5 d-flex">
-                        <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/check-circle-dark.svg" class="me-2 align-top"
+                        <img src="/Assets/check-circle-dark.svg" class="me-2 align-top"
                           width="30" />Access to the Community
                       </div>
                     </div>
@@ -815,10 +245,10 @@
                           <span class="rounded-pill px-3 py-2 text-primary bg-dark">MOST POPULAR</span>
                         </div>
                         <div class="fs-4 text-decoration-line-through" style="text-decoration-color: red !important;">
-                          ₹ 2500
+                          ₹ xxxx
                         </div>
                         <h1 class="display-4">
-                          ₹ 500
+                          ₹ xxx
                           <span class="font-sm fw-normal">+ GST</span>
                         </h1>
                         <h1 class="text-gray display-5 mb-4" style="color: gold;">
@@ -826,25 +256,25 @@
                         </h1>
                         <div class="mb-3">
                           <div class="mb-3 font-italic fs-5 d-flex">
-                            <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/check-circle-dark.svg"
+                            <img src="/Assets/check-circle-dark.svg"
                               class="me-2 align-top d-none" width="30" /><span class="font-italic fw-bold color_lime">For creative minds eager to excel in programming, app and web development.</span>
                           </div>
                           <div class="mb-3 fs-5 d-flex">
-                            <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/check-circle-dark.svg"
+                            <img src="/Assets/check-circle-dark.svg"
                               class="me-2 align-top" width="30" />Everything In Essential
                           </div>
                           <div class="mb-3 fs-5  d-flex">
-                            <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/check-circle-dark.svg"
+                            <img src="/Assets/check-circle-dark.svg"
                               class="me-2 align-top" width="30" /> Priority Responses in Dedicated Servers
                           </div>
       
                           <div class="mb-3 fs-5  d-flex">
-                            <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/check-circle-dark.svg"
+                            <img src="/Assets/check-circle-dark.svg"
                               class="me-2 align-top" width="30" />BONUS : Special App for Learning management, tests and checklist.
                           </div>
       
                           <div class="mb-3 fs-5 d-flex">
-                            <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/check-circle-dark.svg"
+                            <img src="/Assets/check-circle-dark.svg"
                               class="me-2 align-top" width="30" />Have fun with us!
                           </div>
                         </div>
@@ -875,9 +305,9 @@
                         <a href="https://github.com/Goutham-Kumar-A/Tech-Extremer"
                           target="_blank" class="text-decoration-none text-reset">
                           <div class="p-3 fs-4 border-bottom d-flex align-items-center free-asset-item text-white">
-                            <img style="width: 75px;" src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/github_logo.png"
+                            <img style="width: 75px;" src="/Assets/github_logo.png"
                               class="me-4" /><span>
-                              Tech Extremer</span><img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/Vector%2050.svg"
+                              Tech Extremer</span><img src="Assets/Vector 50.svg"
                               width="25" class="ms-auto" />
                           </div>
                         </a>
@@ -886,9 +316,9 @@
                         <a href="https://github.com/pixelBlast-gouthamKumar/pixelBlast"
                           target="_blank" class="text-decoration-none text-reset">
                           <div class="p-3 fs-4 border-bottom d-flex align-items-center free-asset-item text-white">
-                            <img style="width: 75px;" src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/github_logo.png"
+                            <img style="width: 75px;" src="/Assets/github_logo.png"
                               class="me-4" /><span>
-                              Pixel Blast</span><img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/Vector%2050.svg"
+                              Pixel Blast</span><img src="/Assets/Vector 50.svg"
                               width="25" class="ms-auto" />
                           </div>
                         </a>
@@ -1043,7 +473,7 @@
                           class="p-2 text-center rounded-circle border d-flex justify-content-center align-items-center border-primary-light me-3"
                           style="width: 40px; height: 40px;">
                           <!-- <i class="fa-regular fa-envelope"></i> -->
-                          <img src="https://raw.githubusercontent.com/pixelBlast-gouthamKumar/pixelblast.github.io/refs/heads/main/Assets/email.svg" alt="">
+                          <img src="./Assets/email.svg" alt="">
                         </div>
                         <a href="mailto:gouthamkumara2@gmail.com"
                           class="text-white text-decoration-none">gouthamkumara2@gmail.com</a>
